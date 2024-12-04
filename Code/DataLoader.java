@@ -6,6 +6,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
+// This class loads images from a given folder, resizes them, and applies data augmentation techniques
+// such as flipping, rotation, and brightness adjustment to expand the dataset. It converts images into
+// normalized arrays for use in machine learning models.
+
+
 public class DataLoader {
     private double[][] images;
     private int imageWidth;

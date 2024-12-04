@@ -3,6 +3,11 @@ import java.util.Arrays;
 import java.io.FileWriter;
 import java.io.IOException;
 
+// This class trains a Generative Adversarial Network (GAN) using a generator and a discriminator.
+// It manages the training process, including data loading, noise generation, loss calculation,
+// backpropagation, and weight updates. The trainer applies techniques like label smoothing,
+// noise augmentation, and learning rate decay for stable training and logs metrics to a CSV file.
+
 public class GANTrainer {
     private Generator generator;
     private Discriminator discriminator;
@@ -21,8 +26,8 @@ public class GANTrainer {
         this.noiseSize = noiseSize;
         this.generatorLearningRate = generatorLearningRate;
         this.discriminatorLearningRate = discriminatorLearningRate;
-        this.generatorDecay = 0.00001; // Added learning rate decay
-        this.discriminatorDecay = 0.00001; // Added learning rate decay
+        this.generatorDecay = 0.00001;
+        this.discriminatorDecay = 0.00001;
         this.batchSize = batchSize;
     }
 

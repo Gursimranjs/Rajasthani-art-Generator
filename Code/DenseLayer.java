@@ -1,5 +1,9 @@
 import java.util.Random;
 
+// This class implements a fully connected (dense) layer for a neural network. It includes support for dropout
+// regularization, backpropagation, and weight updates using a specified optimizer. The weights are initialized
+// using Xavier/Glorot initialization for improved training stability.
+
 public class DenseLayer implements Layer {
     private double[][] weights;
     private double[] biases;
@@ -8,7 +12,7 @@ public class DenseLayer implements Layer {
     private double[][] gradWeights;
     private double[] gradBiases;
     private Optimizer optimizer;
-    private double dropoutRate; // Dropout rate for regularization
+    private double dropoutRate;
     private boolean[] dropoutMask;
 
     public DenseLayer(int inputSize, int outputSize, Optimizer optimizer) {

@@ -1,5 +1,8 @@
 import java.util.function.Function;
 
+// This class represents an activation layer in a neural network, which applies a specified activation function
+// to its input during the forward pass and computes gradients using the function's derivative during the backward pass.
+
 public class ActivationLayer implements Layer {
     private Function<Double, Double> activationFunc;
     private Function<Double, Double> activationDerivative;

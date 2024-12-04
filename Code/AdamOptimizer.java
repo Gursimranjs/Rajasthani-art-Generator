@@ -20,15 +20,10 @@ public class AdamOptimizer implements Optimizer {
         t++;
         for (int i = 0; i < weights.length; i++) {
             for (int j = 0; j < weights[0].length; j++) {
-                // Update biased first moment estimate
                 mWeights[i][j] = beta1 * mWeights[i][j] + (1 - beta1) * gradWeights[i][j];
-                // Update biased second raw moment estimate
                 vWeights[i][j] = beta2 * vWeights[i][j] + (1 - beta2) * gradWeights[i][j] * gradWeights[i][j];
-                // Compute bias-corrected first moment estimate
                 double mHat = mWeights[i][j] / (1 - Math.pow(beta1, t));
-                // Compute bias-corrected second raw moment estimate
                 double vHat = vWeights[i][j] / (1 - Math.pow(beta2, t));
-                // Update weights
                 weights[i][j] -= learningRate * mHat / (Math.sqrt(vHat) + epsilon);
             }
         }

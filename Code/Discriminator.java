@@ -2,6 +2,12 @@ public class Discriminator {
     private Layer[] layers;
     private double[] inputGradients;
 
+    // This class implements a discriminator for a Generative Adversarial Network (GAN).
+// It consists of multiple layers including dense layers, batch normalization, dropout, and activation functions.
+// The discriminator is responsible for classifying inputs as real or fake, using binary classification
+// with a sigmoid activation. It supports forward and backward passes, weight updates, and training with L2 loss.
+
+
     public Discriminator(int inputSize) {
         double leakyAlpha = 0.2; // Define the negative slope for leaky ReLU
 

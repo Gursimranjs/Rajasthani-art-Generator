@@ -1,8 +1,14 @@
+// This class implements a generator for a Generative Adversarial Network (GAN).
+// It uses a series of dense layers, batch normalization, and activation functions
+// to transform random noise into data resembling the target distribution.
+// The generator is trained to create outputs that fool the discriminator,
+// with the final layer output normalized to [-1, 1] for compatibility with image data.
+
 public class Generator {
     private Layer[] layers;
 
     public Generator(int noiseSize, int outputSize) {
-        double leakyAlpha = 0.2; // Define the negative slope for leaky ReLU
+        double leakyAlpha = 0.2;
 
         layers = new Layer[]{
                 new DenseLayer(noiseSize, 256, new AdamOptimizer(0.0002, 256, noiseSize)),

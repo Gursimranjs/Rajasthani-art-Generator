@@ -1,5 +1,10 @@
 import java.util.Arrays;
 
+// This class implements a batch normalization layer for a neural network.
+// It normalizes the input data during the forward pass to stabilize training and
+// updates scale (gamma) and shift (beta) parameters during the backward pass.
+
+
 public class BatchNormalizationLayer implements Layer {
     private double[] gamma;
     private double[] beta;

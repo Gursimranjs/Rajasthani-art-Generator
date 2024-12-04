@@ -1,14 +1,13 @@
 import java.util.function.Function;
 
-public class Matrix {
-    // Existing methods...
 
-    /**
-     * Applies a function to each element of the input array.
-     * @param input The input array.
-     * @param func The function to apply.
-     * @return A new array with the function applied to each element.
-     */
+// This utility class provides common matrix and vector operations needed for neural network computations.
+// It includes methods for applying functions element-wise, matrix-vector multiplication, vector addition,
+// subtraction, scalar multiplication, and dot product calculation.
+
+public class Matrix {
+
+
     public static double[] applyFunction(double[] input, Function<Double, Double> func) {
         double[] result = new double[input.length];
         for (int i = 0; i < input.length; i++) {
@@ -17,7 +16,7 @@ public class Matrix {
         return result;
     }
 
-    // Other utility methods...
+
 
     public static double[] multiply(double[][] matrix, double[] vector) {
         int rows = matrix.length;

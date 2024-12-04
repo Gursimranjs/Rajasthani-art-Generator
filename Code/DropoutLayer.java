@@ -1,5 +1,10 @@
 import java.util.Random;
 
+// This class implements a dropout layer for a neural network. Dropout is a regularization technique
+// that randomly disables a fraction of neurons during training to prevent overfitting. The layer
+// applies a dropout mask during the forward pass and propagates gradients only for active neurons
+// during the backward pass.
+
 public class DropoutLayer implements Layer {
     private double dropoutRate;
     private boolean[] mask;
