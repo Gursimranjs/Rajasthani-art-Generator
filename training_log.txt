@@ -1,0 +1,4 @@
+Epoch 1/100 - Generator Loss: 0.992553, Discriminator Loss: 0.425503
+Epoch 2/100 - Generator Loss: 0.993891, Discriminator Loss: 0.410628
+Epoch 3/100 - Generator Loss: 0.993932, Discriminator Loss: 0.401624
+Epoch 1/1000 - Generator Loss: 0.999324, Discriminator Loss: 0.358327
